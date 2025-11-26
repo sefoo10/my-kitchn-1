@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات - مطبخي</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- إضافة Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🍲 منتجاتنا</h1>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="products.html">المنتجات</a>
+                <a href="admin.html">لوحة التحكم</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>قائمة الأطباق المتاحة</h2>
+            <div id="productsList" class="products-grid">
+                <!-- المنتجات تظهر هنا -->
+            </div>
+        </div>
+    </main>
+
+    <script src="db.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

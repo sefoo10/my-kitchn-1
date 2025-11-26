@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم - مطبخي</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- إضافة Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>👨🍳 لوحة تحكم البائع</h1>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="products.html">المنتجات</a>
+                <a href="admin.html">لوحة التحكم</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- إحصائيات -->
+            <section class="admin-controls">
+                <h2>🛠 تحكم كامل في النظام</h2>
+                <div class="stats">
+                    <div class="stat-card">
+                        <h3 id="productsCount">0</h3>
+                        <p>منتج مضاف</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3 id="ordersCount">0</h3>
+                        <p>طلب مستلم</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- إضافة منتج -->
+            <section class="add-product">
+                <h2>إضافة منتج جديد</h2>
+                <form id="addProductForm">
+                    <input type="text" id="productName" placeholder="اسم الطبق" required>
+                    <textarea id="productDesc" placeholder="وصف الطبق والمكونات" required></textarea>
+                    <input type="number" id="productPrice" placeholder="سعر الكيلو (جنية)" required min="1">
+                    <button type="submit" class="btn">إضافة المنتج</button>
+                </form>
+            </section>
+
+            <!-- إدارة المنتجات -->
+            <section class="manage-products">
+                <h2>إدارة المنتجات</h2>
+                <div id="adminProductsList" class="products-grid">
+                    <!-- المنتجات تظهر هنا -->
+                </div>
+            </section>
+
+            <!-- الطلبات -->
+            <section class="orders">
+                <h2>الطلبات</h2>
+                <div id="ordersList">
+                    <!-- الطلبات تظهر هنا -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="db.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

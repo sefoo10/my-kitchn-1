@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مطبخي - أكل بيتي بالكيلو</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- إضافة Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>🍲 مطبخي - أكل بيتي بالكيلو</h1>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="products.html">المنتجات</a>
+                <a href="admin.html">لوحة التحكم</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>أكل بيتي بأيدى أمهاتنا 👩🍳</h2>
+            <p>اطلب أطباقك المفضلة بالكيلو وبأسعار مناسبة</p>
+            <a href="products.html" class="btn">اطلب الآن</a>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <h3>🍽️ أطباق متنوعة</h3>
+                <p>أكل بيتي مصنوع بحب</p>
+            </div>
+            <div class="feature">
+                <h3>⚡ توصيل سريع</h3>
+                <p>طلباتك تصل طازجة</p>
+            </div>
+            <div class="feature">
+                <h3>💰 أسعار مناسبة</h3>
+                <p>بالكيلو حسب احتياجك</p>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h2>أشهر الأطباق</h2>
+            <div id="featuredProducts" class="products-grid">
+                <!-- المنتجات المميزة تظهر هنا -->
+            </div>
+        </section>
+    </main>
+
+    <script src="db.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
